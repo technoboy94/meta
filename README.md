@@ -1,10 +1,3 @@
-# Additional building instructions
-For building out team's language model estimator:
-```bash
-cd build
-make HPYLM
-```
-
 # MeTA: ModErn Text Analysis
 
 Please visit our [web page][meta-website] for information and tutorials
