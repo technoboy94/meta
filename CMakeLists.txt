@@ -21,6 +21,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 set(META_PROJECT_SOURCE_DIR ${PROJECT_SOURCE_DIR})
 
+
 include(CMakePushCheckState)
 include(ExternalProject)
 include(deps/meta-cmake/FindOrBuildICU.cmake)
@@ -147,6 +148,7 @@ if(DOXYGEN_FOUND AND NOT TARGET doc)
                     WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
 endif()
 
+add_subdirectory(contrib/hpylm)
 add_subdirectory(src)
 add_subdirectory(tests)
 add_subdirectory(deps/cpptoml EXCLUDE_FROM_ALL)
@@ -158,6 +160,7 @@ if (CMAKE_SIZEOF_VOID_P LESS 8)
     possible, we strongly recommend that you use  MeTA on a 64-bit \
     platform.")
 endif()
+
 
 # install our targets defined in this file
 install(TARGETS meta-definitions
